@@ -3,11 +3,11 @@
     const cart = document.getElementById("modal-cart");
     const closeBtn = cart.querySelector(".modal-close");
 
-    cartBtn.addEventListener("click", function () {
+    cartBtn.addEventListener("click", () => {
         cart.style.display = "flex";
     });
 
-    closeBtn.addEventListener("click", function () {
+    closeBtn.addEventListener("click", () => {
         cart.style.display = "";
     });
 })();
