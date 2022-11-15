@@ -37,7 +37,7 @@
                 localStorage.setItem("goods", JSON.stringify(array));
 
                 if (window.location.pathname !== "/goods.html") {
-                    window.location.href = "/goods.html";
+                    window.location.href = "https://nizrum.github.io/wildberries/goods.html";
                 } else {
                     renderGoods(array);
                 }
