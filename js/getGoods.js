@@ -37,8 +37,8 @@
 
                 localStorage.setItem("goods", JSON.stringify(array));
 
-                if (window.location.pathname !== "/goods.html") {
-                    window.location.pathname = "/goods.html";
+                if (!window.location.pathname.endsWith("/goods.html")) {
+                    window.location.pathname = window.location.pathname.split('/').slice(0, -1).join('/') + "/goods.html";
                 } else {
                     renderGoods(array);
                 }
@@ -61,7 +61,7 @@
         });
     }
 
-    if (localStorage.getItem("goods") && window.location.pathname === "/goods.html") {
+    if (localStorage.getItem("goods") && window.location.pathname.endsWith("/goods.html")) {
         renderGoods(JSON.parse(localStorage.getItem("goods")));
     }
 })();
